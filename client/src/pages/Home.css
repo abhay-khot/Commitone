@@ -1,0 +1,14 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.home-first-section{
+    height: 105vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 35px;
+}
