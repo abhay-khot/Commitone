@@ -91,7 +91,7 @@ function Home() {
 
       <Typography
       gutterBottom
-       >
+      >
       stabilization (SUPG, LPS) and variational multiscale methods
       </Typography>
 
