@@ -1,64 +1,189 @@
 import React from "react";
-import './Home.css'
+
+import Typography from '@material-ui/core/Typography'
+import { Container } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
+
+const useStyles = makeStyles({
+  animation:{
+    fontSize: 75,
+    fontWeight: "bold",
+    backgroundColor: "lightblue",
+    height: "93vh",
+    width: 100,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center"
+  },
+  
+  background:{
+    backgroundColor: 'aqua',
+    width: "100%"
+  }
+
+}) 
+
 function Home() {
+  const classes = useStyles()
+
   return (
-    <div className="home-info">
-      <div className="home-first-section">
-        <h1 className="big-header"> Welcome to <br/>Computational Mathematics Group
-</h1> </div> <div>
+    <Container> 
+      <Typography 
+      variant="h1"
+      className={classes.animation}
+      gutterBottom
+      >
+        Welcome to <br/>Computational Mathematics Group
+      </Typography>
+
+      <Typography 
+      gutterBottom
+      >
         Computational Mathematics Group (CMG) at the Department of Computational
         and Data Sciences is under the Division of Interdisciplinary Research at
         Indian Institute of Science Bangalore, India.
-        <br />
-        We develops accurate, efficient and robust parallel numerical (finite
+        <br/>
+        We develop accurate, efficient and robust parallel numerical (finite
         element) schemes for solving partial differential equations (PDEs) that
-        model several physical and industrial processes. <br />
+        model several physical and industrial processes.
+        <br/>  
         Please visit our in-house finite element package ParMooN.
-      </div>
+      </Typography>
+
+      <Typography 
+      variant="h2"
+      gutterBottom>
+          CMG
+      </Typography>
+            
+      <Typography 
+      variant="h6" 
+      gutterBottom
+      className={classes.background}
+      >
+      Finite Element Analysis:
+      </Typography>
+
+      <Typography 
+      gutterBottom
+      >
+      finite element methods for the solution of PDEs and surface PDEs
+      </Typography>
+
+      <Typography
+      gutterBottom
+      >
+      multigrid methods, ALE approach for moving meshes
+      </Typography>
+
+      <Typography
+      gutterBottom
+      >
       
+      splitting methods for high-dimensional (>3) PDEs
+      </Typography>
+
+      <Typography
+      gutterBottom
+      >
+      Fstability, convergence analysis and error estimates
+      </Typography>
+
+      <Typography
+      gutterBottom
+       >
+      stabilization (SUPG, LPS) and variational multiscale methods
+      </Typography>
+
+      <Typography 
+      variant="h6"
+      className={classes.background}
+      gutterBottom
+      >
+      High Performance Computing:
+      </Typography>
       
+      <Typography
+      gutterBottom
+      >
+      ParMooN, an open-source finite element software development
+      </Typography>
 
-      <div className="home-second-section">
-        <h2> CMG </h2>
-        <h3 className="home-blue-bg"> Finite Element Analysis:</h3>
-        <p>Finite element methods for the solution of PDEs and surface PDEs</p>
-        <p>Multi-grid methods, ALE approach for moving meshes</p>
-        <p>Splitting methods for high-dimensional (Greater than3) PDEs</p>
-        <p>Stability, convergence analysis and error estimates</p>
-        <p>Stabilization (SUPG, LPS) and variational multi-scale methods</p>
-        <br />
+      <Typography gutterBottom>
+      efficient, robust, scalable finite element algorithms
+      </Typography>
 
-        <h3 className="home-blue-bg"> High Performance Computing:</h3>
-        <p>ParMooN, an open-source finite element software development</p>
-        <p>Efficient, robust, scalable finite element algorithms</p>
-        <p>OpenMP and MPI based hybrid parallel algorithms</p>
-        <p>Parallel geometric multi-grid solver</p>
-        <br />
+      <Typography gutterBottom>
+      OpenMP and MPI based hybrid parallel algorithms
+      </Typography>
+      
+      <Typography gutterBottom>
+      parallel geometric multigrid solver
+      </Typography>
+      
+      <Typography 
+      variant="h6" 
+      className={classes.background}
+      gutterBottom>
+      Computational Fluid Dynamics:
+      </Typography>
 
-        <h3 className="home-blue-bg"> Computational Fluid Dynamics:</h3>
-        <p>Free surface and two-phase flows with surfactants and heat transfer</p>
-        <p>Complex (viscoelastic) fluid flows</p>
-        <p>Flows in reactors, fluid-structure interaction problems</p>
-        <p>Flows with boundary and interior layers</p>
-        <p>Flows with floating bodies, ship hydrodynamics</p>
-        <p>Moving contact line problems, dynamics contact angles</p>
-        <p>Population balance systems in crystallizers</p>
-        <p>Turbulent flows with moving/deforming solid bodies</p>
-        <br />
+      <Typography gutterBottom>
+      free surface and two-phase flows with surfactants and heat transfer
+      </Typography>
+      
+      <Typography gutterBottom>
+      complex (viscoelastic) fluid flows
+      </Typography>
+      
+      <Typography gutterBottom>
+      flows in reactors, fluid-structure interaction problems
+      </Typography>
+      
+      <Typography gutterBottom>
+      flows with boundary and interior layers
+      </Typography>
+      
+      <Typography gutterBottom> 
+      flows with floating bodies, ship hydrodynamics
+      </Typography>
+      
+      <Typography gutterBottom>
+      moving contact line problems, dynamics contact angles
+      </Typography>
+      
+      <Typography gutterBottom>
+      population balance systems in crystallizers
+      </Typography>
+      
+      <Typography gutterBottom>
+      turbulent flows with moving/deforming solid bodies
+      </Typography>
+      
+      <Typography 
+      variant="h6" 
+      className={classes.background}
+      gutterBottom>
+      Bio-medical Applications:
+      </Typography>
+      
+      <Typography gutterBottom>
+      computational models for eye
+      </Typography>
 
-        <h3 className="home-blue-bg"> Bio-medical Applications:</h3>
-        <p>Computational models for eye</p>
-        <p>Biophysical model of cancer invasion</p>
-        <p>Flow through nasal cavities and respiratory tract</p>
-        <p>Terahertz heating effects in realistic tissues</p>
+      <Typography gutterBottom>
+      biophysical model of cancer invasion
+      </Typography>
+      
+      <Typography gutterBottom>
+      flow through nasal cavities and respiratory tract
+      </Typography>
 
-        <br />
-      </div>
-
-        <div className="home-footer">
-        Copyright © 2022 Computational Mathematics Group (CMG). All rights reserved.
-        </div>
-    </div>
+      <Typography gutterBottom>
+      terahertz heating effects in realistic tissues
+      </Typography>
+      
+    </Container>
   );
 }
 

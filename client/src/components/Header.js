@@ -104,7 +104,7 @@ export default function MenuAppBar() {
               </ListItem>
               <Collapse in={openNested} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
-                  <ListItem button onClick={() => redirectRoute("/Feature1")}>
+                  <ListItem button onClick={() => redirectRoute("/alumni")}>
                     <ListItemText primary="Numerical Methods ( DS 288 )" />
                   </ListItem>
                   <ListItem button onClick={() => redirectRoute("/Feature2")}>
@@ -126,17 +126,17 @@ export default function MenuAppBar() {
               </ListItem>
               <Collapse in={openNested} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
-                  <ListItem button onClick={() => redirectRoute("/completed")}>
-                    <ListItemText primary="Numerical Methods ( DS 288 )" />
-                  </ListItem>
                   <ListItem button onClick={() => redirectRoute("/ongoing")}>
-                    <ListItemText
-                      primary="Finite elements "
-                    />
+                    <ListItemText primary="Ongoing Projects" />
                   </ListItem>
                   <ListItem button onClick={() => redirectRoute("/prospective")}>
                     <ListItemText
-                      primary="Parallel Computing for FEM"
+                      primary="Prospective Projects/Topics "
+                    />
+                  </ListItem>
+                  <ListItem button onClick={() => redirectRoute("/completed")}>
+                    <ListItemText
+                      primary="Com[pleted Research Projects / Topics"
                     />
                   </ListItem>
                 </List>
